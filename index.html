@@ -1,14 +1,121 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Third Person Clone</title>
+    <title>Hallo Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0a1a2f;
+        color: #ffffff;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        background-color: #0f223a;
+        border-bottom: 1px solid #1e3a5f;
+      }
+      header img {
+        height: 48px;
+      }
+      nav a {
+        margin-left: 2rem;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 6rem 2rem;
+        animation: fadeIn 1.2s ease-in;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        max-width: 800px;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+      .hero p {
+        font-size: 1.25rem;
+        max-width: 600px;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+      .cta-buttons {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .cta-buttons a {
+        background-color: #1a73e8;
+        padding: 0.9rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+      .cta-buttons a:hover {
+        background-color: #0f5fcc;
+      }
+      footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.875rem;
+        color: #888;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <header>
+      <img src="HalloLogo.png" alt="Hallo Solutions Logo" />
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">How it works</a>
+        <a href="#">FAQ</a>
+        <a href="https://www.linkedin.com/in/hugo-nectoux/" target="_blank">LinkedIn</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <h1>AI-powered matching platform between brands & 3PLs</h1>
+      <p>Hallo Solutions helps e-commerce brands find the right logistics partners, automatically and for free.</p>
+      <div class="cta-buttons">
+        <a href="#">Get started as a Brand</a>
+        <a href="#">Get started as a 3PL</a>
+      </div>
+    </main>
+
+    <footer>
+      &copy; 2025 Hallo Solutions. All rights reserved.
+    </footer>
   </body>
 </html>
-  
