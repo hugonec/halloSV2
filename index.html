@@ -4,116 +4,134 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hallo Solutions</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <style>
-      :root {
-        --primary: #001f3f;
-        --text: #111;
-        --bg: #fff;
-        --muted: #666;
-      }
-
       * {
-        box-sizing: border-box;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
-
       body {
         font-family: 'Inter', sans-serif;
-        background-color: var(--bg);
-        color: var(--text);
+        background-color: #ffffff;
+        color: #1a1a1a;
         line-height: 1.6;
       }
-
       header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1.5rem 2rem;
-        border-bottom: 1px solid #eee;
+        padding: 20px 40px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
       }
-
       header img {
-        height: 40px;
+        height: 50px;
       }
-
-      nav a {
-        margin-left: 1.5rem;
+      header nav a {
+        margin-left: 20px;
         text-decoration: none;
-        color: var(--text);
+        color: #1a1a1a;
         font-weight: 600;
       }
-
       .hero {
-        padding: 8rem 2rem 6rem;
         text-align: center;
-        background-color: var(--bg);
+        padding: 100px 40px;
+        background-color: #f5f5f5;
       }
-
       .hero h1 {
-        font-size: 3.5rem;
+        font-size: 48px;
         font-weight: 700;
-        max-width: 800px;
-        margin: 0 auto 1.5rem;
+        margin-bottom: 20px;
       }
-
       .hero p {
-        font-size: 1.25rem;
-        max-width: 700px;
-        margin: 0 auto 2.5rem;
-        color: var(--muted);
+        font-size: 20px;
+        color: #666;
+        margin-bottom: 30px;
       }
-
-      .cta-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-bottom: 4rem;
-      }
-
-      .cta-buttons a {
-        padding: 1rem 2rem;
-        font-weight: 600;
-        font-size: 1rem;
-        background-color: var(--primary);
+      .hero button {
+        background-color: #f15a24;
         color: white;
+        padding: 15px 30px;
+        border: none;
         border-radius: 8px;
-        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
         transition: background-color 0.3s;
       }
-
-      .cta-buttons a:hover {
-        background-color: #003366;
+      .hero button:hover {
+        background-color: #d44d1d;
       }
-
-      .section-info {
-        padding: 6rem 2rem;
-        background-color: #f9f9f9;
+      .section-title {
         text-align: center;
+        margin-top: 100px;
+        font-size: 36px;
+        font-weight: 700;
+        color: #f15a24;
       }
-
-      .section-info h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+      .section-subtitle {
+        text-align: center;
+        color: #f15a24;
+        margin-top: 10px;
+        font-size: 18px;
+        margin-bottom: 50px;
+      }
+      .how-it-works {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        padding: 40px;
+        flex-wrap: wrap;
+      }
+      .step {
+        text-align: center;
+        max-width: 300px;
+      }
+      .step img {
+        height: 80px;
+        margin-bottom: 20px;
+      }
+      .step h3 {
+        color: #f15a24;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .step p {
+        font-size: 16px;
+        color: #333;
+      }
+      .cta-section {
+        background-color: #f15a24;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+      }
+      .cta-section h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+      .cta-section button {
+        background-color: white;
+        color: #f15a24;
         font-weight: 600;
+        padding: 15px 30px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
       }
-
-      .section-info p {
-        max-width: 800px;
-        margin: 0 auto;
-        font-size: 1.15rem;
-        color: var(--muted);
+      .logos-section {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        padding: 60px 20px;
+        flex-wrap: wrap;
       }
-
-      footer {
-        text-align: center;
-        padding: 3rem 2rem;
-        font-size: 0.9rem;
-        color: var(--muted);
-        border-top: 1px solid #eee;
+      .logos-section img {
+        height: 50px;
+        filter: grayscale(100%);
+        opacity: 0.8;
       }
     </style>
   </head>
@@ -121,35 +139,50 @@
     <header>
       <img src="HalloLogo.png" alt="Hallo Solutions Logo" />
       <nav>
-        <a href="#">About</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-        <a href="https://www.linkedin.com/in/hugonectoux/" target="_blank">LinkedIn</a>
+        <a href="#how">How it works</a>
+        <a href="#get-started">Get Started</a>
       </nav>
     </header>
 
     <section class="hero">
-      <h1>We match brands with the right 3PL</h1>
-      <p>
-        Hallo Solutions is a free AI-powered tool that connects e-commerce brands with vetted 3PL partners. 
-        Tell us what you're looking for and we'll help you find your logistics soulmate.
-      </p>
-      <div class="cta-buttons">
-        <a href="#">Start as a Brand</a>
-        <a href="#">Start as a 3PL</a>
+      <h1>Matching Brands & 3PLs Made Easy</h1>
+      <p>Think of Hallo Solutions as a free dating app for e-commerce brands and 3PLs.</p>
+      <button id="get-started">Get Started</button>
+    </section>
+
+    <h2 class="section-title">How does it work?</h2>
+    <p class="section-subtitle">You can get connected with the perfect 3PL with just a few simple steps</p>
+
+    <section class="how-it-works">
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/1011/1011863.png" alt="Step 1" />
+        <h3>Tell us your needs</h3>
+        <p>Fill out your profile and tell us what you're looking for in a fulfillment partner. We'll match you with the best 3PLs for your brand.</p>
+      </div>
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/2674/2674060.png" alt="Step 2" />
+        <h3>Explore your top matches</h3>
+        <p>Our AI algorithm scans hundreds of providers to identify your top 10 3PLs in seconds.</p>
+      </div>
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png" alt="Step 3" />
+        <h3>Compare & connect</h3>
+        <p>Receive proposals, compare options, and connect with the best-fit fulfillment partner — all for free.</p>
       </div>
     </section>
 
-    <section class="section-info">
-      <h2>Think of Hallo Solutions as a dating app for logistics</h2>
-      <p>
-        Hallo Solutions takes the guesswork out of 3PL matchmaking. Whether you’re a fast-growing brand or a logistics expert,
-        we use structured data and AI to recommend the right fit. No fees. No friction. Just the right match.
-      </p>
+    <section class="cta-section">
+      <h2>Ready to find the perfect logistics company?</h2>
+      <button>Find the best 3PL for your brand</button>
+      <p style="margin-top: 10px; font-style: italic; text-decoration: underline;">It’s free!</p>
     </section>
 
-    <footer>
-      &copy; 2025 Hallo Solutions — All rights reserved.
-    </footer>
+    <section class="logos-section">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Victoria%27s_Secret_logo.svg" alt="Victoria's Secret" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Rent_the_Runway_logo.svg" alt="Rent the Runway" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Manucurist_Logo.svg" alt="Manucurist" />
+      <img src="https://upload.wikimedia.org/wikipedia/en/8/85/Adore_Me_logo.svg" alt="Adore Me" />
+    </section>
+
   </body>
 </html>
