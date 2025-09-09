@@ -4,93 +4,116 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hallo Solutions</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+      :root {
+        --primary: #001f3f;
+        --text: #111;
+        --bg: #fff;
+        --muted: #666;
+      }
+
       * {
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
       }
+
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #0a1a2f;
-        color: #ffffff;
+        background-color: var(--bg);
+        color: var(--text);
         line-height: 1.6;
-        overflow-x: hidden;
       }
+
       header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2rem;
-        background-color: #0f223a;
-        border-bottom: 1px solid #1e3a5f;
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid #eee;
       }
+
       header img {
-        height: 48px;
+        height: 40px;
       }
+
       nav a {
-        margin-left: 2rem;
-        color: #ffffff;
+        margin-left: 1.5rem;
         text-decoration: none;
+        color: var(--text);
         font-weight: 600;
       }
+
       .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        padding: 8rem 2rem 6rem;
         text-align: center;
-        padding: 6rem 2rem;
-        animation: fadeIn 1.2s ease-in;
+        background-color: var(--bg);
       }
+
       .hero h1 {
-        font-size: 3rem;
-        max-width: 800px;
-        margin-bottom: 1rem;
+        font-size: 3.5rem;
         font-weight: 700;
+        max-width: 800px;
+        margin: 0 auto 1.5rem;
       }
+
       .hero p {
         font-size: 1.25rem;
-        max-width: 600px;
-        margin-bottom: 2rem;
-        opacity: 0.9;
+        max-width: 700px;
+        margin: 0 auto 2.5rem;
+        color: var(--muted);
       }
+
       .cta-buttons {
         display: flex;
-        gap: 1.5rem;
-        flex-wrap: wrap;
         justify-content: center;
+        gap: 1rem;
+        margin-bottom: 4rem;
       }
+
       .cta-buttons a {
-        background-color: #1a73e8;
-        padding: 0.9rem 2rem;
+        padding: 1rem 2rem;
+        font-weight: 600;
+        font-size: 1rem;
+        background-color: var(--primary);
+        color: white;
         border-radius: 8px;
         text-decoration: none;
-        color: #ffffff;
-        font-weight: 600;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s;
       }
+
       .cta-buttons a:hover {
-        background-color: #0f5fcc;
+        background-color: #003366;
       }
+
+      .section-info {
+        padding: 6rem 2rem;
+        background-color: #f9f9f9;
+        text-align: center;
+      }
+
+      .section-info h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .section-info p {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.15rem;
+        color: var(--muted);
+      }
+
       footer {
         text-align: center;
-        padding: 2rem;
-        font-size: 0.875rem;
-        color: #888;
-      }
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        padding: 3rem 2rem;
+        font-size: 0.9rem;
+        color: var(--muted);
+        border-top: 1px solid #eee;
       }
     </style>
   </head>
@@ -98,24 +121,35 @@
     <header>
       <img src="HalloLogo.png" alt="Hallo Solutions Logo" />
       <nav>
-        <a href="#">Home</a>
-        <a href="#">How it works</a>
-        <a href="#">FAQ</a>
-        <a href="https://www.linkedin.com/in/hugo-nectoux/" target="_blank">LinkedIn</a>
+        <a href="#">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/hugonectoux/" target="_blank">LinkedIn</a>
       </nav>
     </header>
 
-    <main class="hero">
-      <h1>AI-powered matching platform between brands & 3PLs</h1>
-      <p>Hallo Solutions helps e-commerce brands find the right logistics partners, automatically and for free.</p>
+    <section class="hero">
+      <h1>We match brands with the right 3PL</h1>
+      <p>
+        Hallo Solutions is a free AI-powered tool that connects e-commerce brands with vetted 3PL partners. 
+        Tell us what you're looking for and we'll help you find your logistics soulmate.
+      </p>
       <div class="cta-buttons">
-        <a href="#">Get started as a Brand</a>
-        <a href="#">Get started as a 3PL</a>
+        <a href="#">Start as a Brand</a>
+        <a href="#">Start as a 3PL</a>
       </div>
-    </main>
+    </section>
+
+    <section class="section-info">
+      <h2>Think of Hallo Solutions as a dating app for logistics</h2>
+      <p>
+        Hallo Solutions takes the guesswork out of 3PL matchmaking. Whether you’re a fast-growing brand or a logistics expert,
+        we use structured data and AI to recommend the right fit. No fees. No friction. Just the right match.
+      </p>
+    </section>
 
     <footer>
-      &copy; 2025 Hallo Solutions. All rights reserved.
+      &copy; 2025 Hallo Solutions — All rights reserved.
     </footer>
   </body>
 </html>
